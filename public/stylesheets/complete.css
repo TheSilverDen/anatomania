@@ -1,0 +1,198 @@
+.whiteBox{
+    overflow-y: scroll;
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s ease;
+    border-radius: 30px;
+    margin-top: 50px;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.outerBox{
+    width: 40%;
+    height: 8%;
+    border-style: solid;
+    border-color: #2b3e51;
+    border-width: thin;
+    border-radius: 3px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#roundCompleteText{
+    margin-top: 1%;
+}
+
+.levelBox{
+    height: 80%;
+    width: 100%;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 2px;
+    border-color: #2b3e51;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.levelText{
+    color: #9f9f9f;
+}
+
+
+.totalScore{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.statistics{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 6% 0 6% 0;
+}
+
+.statisticsContent{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+#achievements{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 30%;
+    margin-top: 1%;
+}
+#achievementsListHeader{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.achievementsListWrapper{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: hidden;
+    border-radius: 20px;
+    margin-top: 1%;
+    background-color: rgba(171, 171, 175, 0.2);
+    position: relative;
+
+}
+::-webkit-scrollbar{
+    height: 6px;
+}
+
+#achievementsList{
+    position: absolute;
+    left: 5px;
+    list-style: none;
+    white-space: nowrap;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievementsListElement{
+    display: inline-block;
+    padding: 10px;
+    flex-direction: row;
+    height: 90%;
+}
+.unlockedIcon{
+    scale: 20%;
+}
+
+#levelStatistics{
+    height: 70%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    padding: 1%;
+}
+.achievementsText{
+    text-align: center;
+    margin-bottom: 1%;
+}
+.achievementsImage{
+    height: 85px;
+    width: auto;
+}
+.replayButton{
+    margin: 2% 0 5% 0;
+}
+.gameBar{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    height: 12px;
+    width: 100%;
+    right: 10%;
+    bottom: 10%;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+}
+.barGroup{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 5%;
+}
+.barIcon{
+    width: 4%;
+    height: 54%;
+    margin-left: 0.5%;
+}
+#tagBarSmile{
+    background-color: rgba(0, 128, 0, 0.5);
+    height: 100%;
+}
+#tagBarMeh{
+    background-color: rgba(255, 180, 0, 0.5);
+    height: 100%;
+}
+#tagBarFrown{
+    background-color: rgba(164, 0, 0, 0.5);
+    height: 100%;
+
+}
+#tagBarNo{
+    background-color: rgba(164, 0, 0, 0);
+    height: 100%;
+
+}
+hr{
+    width: 100%;
+}
+

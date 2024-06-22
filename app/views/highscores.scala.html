@@ -1,0 +1,87 @@
+@()
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/basicComponents.css")'>
+		<link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/highscores.css")'>
+		<link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/drawer.css")'>
+		<script src='@routes.Assets.versioned("javascripts/functions.js")' type="text/javascript"></script>
+		<script src='@routes.Assets.versioned("javascripts/drawer.js")' type="text/javascript"></script>
+		<script src='@routes.Assets.versioned("javascripts/highscores.js")' type="text/javascript"></script>
+		<title>Highscores</title>
+	</head>
+	<body onload="fillLeaderboard(); isActive()">
+		<div class="drawerHelper">Highscores</div>
+			<!--Navigation bar-->
+		<aside id="nav-placeholder"></aside>
+		<div class="pageContent">
+			<div class="whiteBox">
+				<h1>Highscores</h1>
+				<div class="scoreWrapper">
+					<div id="topScores" class="row">
+						<div class="col-md-6 step-container">
+							<div id="position2Pod" >
+								<img class="podiumPlaceIMG" src="assets/images/highscores/2ndPlaceNew.png" alt="2nd place">
+							</div>
+							<div id="second-step" class="step centerBoth podium-number">
+								<img id="secondPlaceIMG" alt="profileView pic" class="profilePicScores">
+								<div id="secondName" class="podiumName"></div>
+								<div id="secondScore" class="scorePodium"></div>
+							</div>
+						</div>
+						<div class="col-md-6 step-container">
+							<div id="position1Pod">
+								<img class="podiumPlaceIMG" src="assets/images/highscores/1stPlaceNew.png" alt="1st place">
+							</div>
+							<div id="first-step" class="step centerBoth podium-number">
+								<img id="firstPlaceIMG" alt="profileView pic" class="profilePicScores">
+								<div id="firstName" class="podiumName"></div>
+								<div id="firstScore" class="scorePodium"></div>
+							</div>
+						</div>
+						<div class="col-md-6 step-container">
+							<div id="position3Pod">
+								<img class="podiumPlaceIMG" src="assets/images/highscores/3rdPlaceNew.png" alt="3rd place">
+							</div>
+							<div id="third-step" class="step centerBoth podium-number">
+								<img id="thirdPlaceIMG" alt="profileView pic" class="profilePicScores">
+								<div id="thirdName" class="podiumName"></div>
+								<div id="thirdScore" class="scorePodium"></div>
+							</div>
+						</div>
+					</div>
+					<div class="restScores" >
+						<div>
+							<table id="headTable">
+								<thead>
+									<th id="position">Pos</th>
+									<th class="tableColumnHead" >Name</th>
+									<th class="tableColumnHead"><i data-feather="dollar-sign" class="bi bi-play-fill"></i></th>
+								</thead>
+							</table>
+						</div>
+						<div id="bodyTableWrapper">
+							<table id="bodyTable" class="table table-bordered">
+	@*							<thead class="alert-info">*@
+	@*								<tr>*@
+	@*									<th id="position">Pos</th>*@
+	@*									<th class="tableColumn">Name</th>*@
+	@*									<th class="tableColumn">Score</th>*@
+	@*								</tr>*@
+	@*							</thead>*@
+								<tbody id= "result"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<aside>
+		@sideDrawer()
+		</aside>
+	</body>
+</html>

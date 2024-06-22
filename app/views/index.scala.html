@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/index.css")'>
+      <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/drawer.css")'>
+      <link rel="stylesheet"  media="screen" href='@routes.Assets.versioned("stylesheets/basicComponents.css")'>
+      <script src='@routes.Assets.versioned("javascripts/drawer.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/functions.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/tags.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/main.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/index.js")' type="text/javascript"></script>
+      <script src="https://unpkg.com/feather-icons"></script>
+      <title>Main</title>
+    </head>
+    <body onload="isActive(); getInitialQuestion(); checkDbElements()">
+      <div class="drawerHelper">Main</div>
+        <!--Navigation bar-->
+      <aside id="nav-placeholder"> </aside>
+      <div class="pageContent">
+        <div class="whiteBox">
+          <i id="infoButton" data-feather="info" onclick="openUserManual()"></i>
+            <h2>Spiel starten?</h2>
+
+            <button type="submit" onclick="window.location.href= 'http://localhost:9000/game';" ><i data-feather="play" class="bi bi-play-fill"></i></button>
+
+          <div class="popup" id="infoPopup" style="display: none;">
+            <div id="closeInfo" onclick="hideUserManual()"><i data-feather="x-octagon"></i></div>
+            <div id="userManual">
+              <h2 class="userManualHeader">Willkommen bei ANATOMANIA</h2>
+              <p>Dies ist ein aufregendes Browser-Quiz, bei dem du Fragen zu den wichtigsten Organen im menschlichen Körper beantwortest und dein Wissen erweiterst! Hier ist eine kurze Anleitung, wie du loslegen kannst:</p>
+              <br>
+              <hr>
+              <br>
+              <h3>1.	Spiel starten: </h3>
+              <br>
+              <p>Hier findest du einen Button um das Spiel zu starten. Wähle den Button, um das Spiel zu starten.</p>
+              <br>
+              <hr>
+              <br>
+              <h3>2.	Das Spiel spielen: </h3>
+              <br>
+                <p class="manualParagraph">Nun kannst du mit dem Spielen beginnen! Jede Runde besteht aus 3x5 Fragen zu einem unterschiedlichen Organ. Jede Frage hat eine richtige Antwort, die du auswählen musst indem du sie anklickst. </p>
+                <p class="manualParagraph">Nachdem du deine Frage beantwortet hast, kannst du sie mithilfe der Smileys nach Schwierigkeit taggen. Schwierig getaggte Fragen werden dir häufiger angezeigt. </p>
+                <p class="manualParagraph">Nutze die Joker, falls du bei einer Frage nicht weiterkommst. Je mehr du spielst, desto besser wirst du darin und desto mehr Coins wirst du verdienen.</p>
+                <p class="manualParagraph">Für ein Spiel hast du 5 Minuten Zeit. Wenn du schnell bist, bekommst du Bonus-Coins, wenn du sehr langsam bist gibt es Abzug. Falls du nach Ablauf der 5 Minuten nicht fertig bist, musst du von vorne beginnen.</p>
+                <p class="manualParagraph"> Wenn du das Spiel beenden möchtest, klicke einfach auf die Schaltfläche "X".
+                </p>
+              <br>
+              <hr>
+              <br>
+              <h3>3.	Coins sammeln: </h3>
+              <br>
+              <p class="manualParagraph">Sammle Coins, indem du das Quiz immer wieder spielst und Fragen richtig beantwortest. Je mehr Coins du sammelst, desto höher wird dein Platz auf der Highscoresliste sein. Man kann sie also als Highscore verstehen.</p>
+              <br>
+              <hr>
+              <br>
+              <h3>4.	Joker: </h3>
+              <br>
+              <p class="manualParagraph">Mit deinen gesammelten Coins kannst du dir während des Spiels Joker kaufen. Achtung, gekaufte Joker werden automatisch für die aktuelle Frage verwendet! </p>
+              <br>
+              <div>
+                <h4>50:50-Joker: </h4>
+                <p>Markiert 2 falsche Antworten.</p>
+              </div>
+              <div>
+                <h4>Publikum-Joker: </h4>
+                <p>Gibt ein Publikums-Rate zur richtigen Antwort an.</p>
+              </div>
+              <div>
+                <h4>Skip-Joker: </h4>
+                <p>Überspringt die Frage.</p>
+              </div>
+              <br>
+              <hr>
+              <br>
+              <h3>5.	Achievements: </h3>
+              <br>
+              <p>Hier kannst du für jedes Organ deine Fortschritte verfolgen. Es gibt folgende Achievements: </p>
+                <div>
+                  <h4>Novize: </h4>
+                  <p>eine Runde eines Levels mit einem Organ zum ersten Mal abgeschlossen </p>
+                </div>
+                <div>
+                  <h4>Profi: </h4>
+                  <p>von einem Organ in einem Level alle fünf Fragen korrekt </p>
+                </div>
+                <div>
+                  <h4>Experte: </h4>
+                  <p>alle vorhandenen Fragen eines Levels eines Organs korrekt </p>
+                </div>
+                <div>
+                  <h4>Meister: </h4>
+                  <p>pro Organ alle Fragen beantwortet
+                  </p>
+                </div>
+                <div>
+                  <h4>Fehlerfrei: </h4>
+                  <p>Alle Fragen in einer Spielrunde fehlerfrei beantwortet </p>
+                </div>
+              <br>
+              <hr>
+              <br>
+              <h3>6. Spiel beenden: </h3>
+              <br>
+              <p class="manualParagraph">Wenn du das Spiel beenden möchtest, klicke einfach auf die Schaltfläche "X" oder "Logout" und du wirst automatisch abgemeldet</p>
+              <br>
+              <hr>
+              <br>
+              <h4>Wir hoffen, dass diese Anleitung hilfreich war, und wünschen dir viel Spaß beim Spielen von ANATOMANIA!</h4>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <aside>
+      @sideDrawer()
+      </aside>
+      <script>
+      feather.replace()
+    </script>
+    </body>
+  </html>

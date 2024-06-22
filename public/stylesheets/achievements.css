@@ -1,0 +1,111 @@
+#body {
+    background-color: #CCEEF9;
+}
+
+/*.whiteBox {*/
+/*    overflow-y: scroll;*/
+/*}*/
+#achievementsListWrapper{
+    top:80px;
+    bottom: 20px;
+    left: 100px;
+    right: 100px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+#achievementsList{
+    columns: 4;
+}
+
+h1{
+    margin-bottom: 30px;
+    top: 15px;
+    position: absolute;
+}
+
+.unlocked-achievements {
+    float: left;
+    margin-left: 220px;
+}
+
+.locked-achievements {
+    float: right;
+    margin-right: 220px;
+}
+
+.img-desc {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.achievementImage {
+    transform: scale(0.7)
+}
+.achievementsListElement{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    flex-direction: row;
+
+}
+#achievementsListNovize{
+    list-style: none;
+    flex-wrap: wrap;
+}
+#achievementsListProfi{
+    list-style: none;
+    flex-wrap: wrap;
+    flex-basis: auto;
+
+}
+#achievementsListExperte{
+    list-style: none;
+    flex-wrap: wrap;
+    flex-basis: auto;
+
+}
+#achievementsListMeister{
+    list-style: none;
+    flex-wrap: wrap;
+    flex-basis: auto;
+
+}
+#achievementsListFehlerfrei{
+    list-style: none;
+    flex-wrap: wrap;
+    flex-basis: auto;
+
+}
+.achievementsHeader{
+    font-size: 18px;
+    margin-bottom: 3%;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.achievementsText{
+    font-size: 12px;
+
+}
+.achievementsHeader::before {
+    content: "";
+    border-top: 1px solid black;
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+    margin-left: -30px;
+
+}
+
+.achievementsHeader::after {
+    content: "";
+    border-top: 1px solid black;
+    display: inline-block;
+    width: 20px;
+    margin-left: 10px;
+}

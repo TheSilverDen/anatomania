@@ -1,0 +1,144 @@
+h1{
+    margin-bottom: 30px;
+    top: 15px;
+    position: absolute;
+}
+
+.scoreWrapper{
+    margin-top: 30px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+
+#topScores{
+    position: relative;
+    padding-bottom: 50px;
+}
+
+#topScores {
+    margin: 0 auto;
+    display: flex;
+    height: 40%;
+    width: 80%;
+}
+
+.podium-number {
+    font-weight: bold;
+    font-size: 2em;
+    color: black;
+}
+
+.step-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 0 15px;
+}
+
+.step-container>div:first-child {
+    margin-top: auto;
+    text-align: center;
+}
+
+.step {
+    text-align: center;
+    padding-right: 20px;
+    background: lightgray;
+    border-radius: 10px;
+    box-shadow: black;
+}
+.podiumPlaceIMG{
+    width: 20%;
+    height: auto;
+}
+#first-step {
+    height: 85%;
+    display: flex;
+    flex-direction: row;
+}
+.scorePodium{
+    padding-left: 8px;
+    font-weight: lighter;
+    font-size: 0.75em;
+    color: black
+}
+
+#second-step {
+    height: 45%;
+}
+
+#third-step {
+    height: 35%;
+}
+
+.centerBoth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profilePicScores{
+    width: 20%;
+    height: auto;
+    margin-right: 3%;
+}
+.podiumName{
+    font-size: 0.7em;
+}
+.restScores{
+    width: 40%;
+    height: 55%;
+    background: #f3f3f3;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 3.5em;
+    border-radius: 20px;
+    border-style: hidden;
+}
+#bodyTableWrapper{
+    height: 100%;
+    overflow-y: scroll;
+}
+#bodyTableWrapper > table{
+    width: 100%;
+}
+#bodyTable{
+    margin-left:auto;
+    margin-right:auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border-style: hidden;
+}
+#headTable{
+    background-color: lightgray;
+    width: 100%;
+    height: 3em;
+    padding-bottom: 5px;
+    position: absolute;
+    top: 0;
+    border-radius: 20px 20px 0 0;
+    border-style: hidden;
+}
+
+tr{
+    height: 3em;
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: #ffffff;;
+}
+#position{
+    width: 15%;
+}
+.tableColumn{
+    width: 45%;
+}
+.tableColumnHead{
+    width: 42%;
+}

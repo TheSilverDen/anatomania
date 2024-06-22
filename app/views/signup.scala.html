@@ -1,0 +1,46 @@
+@()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANATOMANIA Login</title>
+    <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/login.css")'>
+    <script src='@routes.Assets.versioned("javascripts/signup.js")' type="text/javascript"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+    <h2>Sign Up</h2>
+    <div id="login-form"> <!-- method="post" action="attroutes.DatabaseController.createUser()-->
+
+        <p>
+            <input type="text" id="username" name="username" placeholder="Username" oninput="checkUsernameLength()" required>
+        </p>
+        <p>
+            <input type="text" id="first_name" name="first_name" placeholder="Vorname" required>
+        </p>
+        <p>
+            <input type="text" id="surname" name="surname" placeholder="Nachname" required>
+        </p>
+        <p>
+            <input type="text" id="email" name="email" placeholder="Email" required >
+        </p>
+        <p>
+            <input type="password" id="password" name="password" placeholder="Passwort" required >
+        </p>
+        <p>
+            <input type="password" id="passwordWdh" name="passwordWdh" placeholder="Passwort wiederholen"  oninput="checkPassword()" required >
+        </p>
+        <p id="registrierenButtonWrapper">
+            <!--<input type="submit" onclick="goToCreateUser()" id="signup" value="Sign Up">-->
+            <button id="submitSignUp" onclick="goToCreateUser()" disabled>Registrieren</button>
+        </p>
+    </div>
+    <div id="create-account-wrap">
+        <p>Schon registriert? <a href="login">zum Login</a><p>
+    </div><!--create-account-wrap-->
+</div><!--login-form-wrap-->
+<!-- partial -->
+
+</body>
+</html>

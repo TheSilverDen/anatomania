@@ -1,0 +1,94 @@
+body{
+    background: #CCEEF9;
+}
+
+h2{
+    color: dimgray;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#infoButton{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 2.5%;
+    height: auto;
+    border-style: hidden;
+    border-radius: 50%;
+}
+#infoButton:hover{
+    background-color: rgba(211, 211, 211, 0.45);
+    color: #0f0f0f;
+}
+button{
+    width: 170px;
+    height: 70px;
+    border-radius: 12px;
+    background-color: lightcyan;
+    color: dimgray;
+    border: 2px solid lightblue ;
+    transition-duration: 0.2s;
+    align-content: center;
+    vertical-align: middle;
+}
+
+button:hover{
+    background-color: rgba(183, 231, 231, 0.34);
+    color: black;
+}
+
+.whiteBox{
+    vertical-align: center;
+    align-content: center;
+    horiz-align: center;
+}
+#infoPopup{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 80%;
+    background-color: rgb(93, 93, 93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    border-style: hidden;
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+#closeInfo{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    color: white;
+    border-style: hidden;
+    border-radius: 50px;
+    width: 5%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#closeInfo:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#userManual{
+    color: white;
+    font-size: larger;
+    /*margin-top: 50%;*/
+    position: absolute;
+    top: 0;
+    padding: 3% 5% 3% 5%;
+    line-height: 120%;
+}
+.userManualHeader{
+    color: white;
+}
+.manualParagraph{
+    line-height: 130%;
+
+}

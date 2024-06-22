@@ -1,0 +1,490 @@
+body{
+    background: #CCEEF9;
+}
+
+h2{
+    color: dimgray;
+    text-align: center;
+}
+
+text{
+    text-align: center;
+}
+
+
+button:hover:enabled{
+    background-color: #CCEEF9;
+    color: black;
+}
+.questionBox{
+    font-size: 1.3vw;
+    width: 100%;
+    height: 80%;
+    border-radius: 12px;
+    background-color: #CCEEF9;
+    color: dimgray;
+    border: 2px solid lightblue;
+    /*transition-duration: 0.2s;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.outerBox{
+    width: 80%;
+    height: 90%;
+    border-style: hidden;
+    border-color: #4c6b8a;
+    border-width: medium;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.levelBox{
+    height: 50%;
+    width: 10%;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: #4c6b8a;
+    margin: 3px;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    padding: 0.3%;
+}
+.levelText{
+    position: absolute;
+    top: 30%;
+    color: #9f9f9f;
+    background: transparent;
+    z-index: 1;
+    font-size: 26px;
+}
+#levelText1{
+    left: 40%;
+    top: 21%;
+}
+#levelText2{
+    left: 40%;
+    top: 21%;
+}
+#levelText3{
+    left: 40%;
+    top: 21%;
+}
+.innerLevelBox{
+    position: relative;
+    text-align: left;
+    height: 100%;
+    border-style: hidden;
+    border-radius: 10px;
+}
+.innerLevelBox::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: transparent;
+}
+#js_timer{
+    width: 5%;
+    height: 50%;
+    text-align: center;
+}
+
+#timer{
+    background: #fff;
+    color: #000;
+    width: 100px;
+}
+#pauseButton{
+    height: 10%;
+    width: 50%;
+}
+#timeBarFill{
+    height: 100%;
+
+}
+.questionCounter{
+    text-align: left;
+    margin-left: 10px;
+    color: dimgray;
+}
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.buttonGroup{
+    /*background-color: lightcyan;*/
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+button{
+    /*font-size: 12px;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: dimgray;
+    border: 1px solid lightblue ;
+    margin: 20px;
+    padding: 10px;
+    background-color: #efefef;
+}
+
+.totalScore{
+    margin-top: 5%;
+}
+
+#buttonElements{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.quizWeiter{
+    width: 10%;
+    height: 40%;
+    padding: 0;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tagIcon{
+    height: 70%;
+    width: 50%;
+}
+#smile{
+    background-color: rgba(0, 128, 0, 0.5);
+}
+#meh{
+    background-color: rgba(255, 180, 0, 0.5);
+}
+#frown{
+    background-color: rgba(164, 0, 0, 0.5);
+}
+#pictureWrapper{
+    height: 30%;
+    width: 100%;
+
+}
+#organ-img{
+    width: 18%;
+    height: 100%;
+    border-style: hidden;
+    border-radius: 10px;
+
+}
+/*#organPicture{*/
+/*    height: 50vh; !* Hier wird die Höhe auf 50% der Bildschirmhöhe gesetzt *!*/
+/*    width: auto; !* Hier wird die Breite automatisch angepasst, um das Seitenverhältnis des Bildes beizubehalten *!*/
+/*    display: block; !* Hier wird das Bild als Blockelement behandelt, damit es vertikal zentriert wird *!*/
+/*    margin: 0 auto; !* Hier wird das Bild horizontal zentriert *!*/
+/*    max-width: 100%; !* Hier wird eine maximale Breite von 100% festgelegt, um sicherzustellen, dass das Bild nicht breiter als sein Container wird *!*/
+/*    padding: 10px; !* Hier wird ein Padding von 10px hinzugefügt, um das Bild von anderen Elementen auf der Seite zu trennen *!*/
+/*}*/
+
+#topBarQuiz{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#stopRound{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    height: 45%;
+    margin: 0 4% 0 4%;
+    border-style: hidden;
+    border-radius: 50px;
+}
+#stopRound:hover{
+    background-color: #d2d2d2;
+}
+
+#quizCenter{
+    text-align: center;
+    margin: 0 20px 5px 20px;
+    width: 95%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+#joker{
+    width: 150px;
+    height: 55px;
+    position: absolute;
+    right: 260px;
+    top: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(192, 237, 248);
+}
+#jokerShopButton{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    border-style: hidden;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+#questionWrapper{
+    /*display: inline-block;*/
+    height: 20%;
+    margin-bottom: 20px;
+    /*justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    vertical-align: center;*/
+}
+.barWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0 1% 0;
+    height: 10%;
+}
+.gameBar{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    height: 8px;
+    width: 100%;
+    right: 10%;
+    bottom: 10%;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+}
+.barGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 80%;
+    height: 50%;
+}
+.barIcon{
+    width: 2%;
+    height: 50%;
+    margin-left: 0.5%;
+}
+.popup {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    border-style: hidden;
+    border-radius: 20px;
+}
+#audiencePopup{
+    background-color: rgb(255, 255, 255);
+    top: 7%;
+    left: 38%;
+    width: 34%;
+    height: 34%;
+    border-style: solid;
+    border-width: 1px;
+}
+#bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+.singleBarWrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-left: 3%;
+}
+.bar {
+    width: 0;
+    height: 16px;
+    background-color: #737373;
+    margin: 7px;
+    border-radius: 10px;
+    border-style: hidden;
+}
+#popupOKButton{
+    margin-top: 3%;
+    width: 10%;
+    height: 10%;
+    border-style: hidden;
+    border-radius: 15px;
+    background-color: rgba(208, 208, 208, 0.50);
+}
+#popupOKButton:hover{
+    background-color: rgb(192, 237, 248);
+}
+#popupHeader{
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+.answerPopup{
+    color: #000000;
+}
+#coinsOverview{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-bottom: 10%;
+}
+#closeShop{
+    position: absolute;
+    left: 3%;
+    top: 6%;
+    color: white;
+    border-style: hidden;
+    border-radius: 50px;
+    width: 8%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#closeShop:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#jokerPurchaseButtons{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+.purchaseGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 5%;
+}
+.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#lackingCoinsPopup{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 30%;
+    background-color: rgba(220, 220, 220, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    border-style: hidden;
+    border-radius: 20px;
+}
+#purchaseSucceeded{
+    background-color: rgba(58, 57, 57, 1);
+    position: absolute;
+    top: 37.5%;
+    left: 37.5%;
+    width: 25%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    border-style: hidden;
+    border-radius: 20px;
+    padding: 5%;
+}
+#coinErrorMsg{
+    color: #0f0f0f;
+}
+#purchaseSucceededMsg{
+    color: rgb(236, 236, 236);
+    margin-bottom: 1%;
+    margin-top: 10%;
+}
+#purchaseSucceededOk{
+    width: 40%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.answer{
+    padding: 1.5%;
+}
+#tagBarSmile{
+    background-color: rgba(0, 128, 0, 0.5);
+    height: 100%;
+}
+#tagBarMeh{
+    background-color: rgba(255, 180, 0, 0.5);
+    height: 100%;
+}
+#tagBarFrown{
+    background-color: rgba(164, 0, 0, 0.5);
+    height: 100%;
+
+}
+#tagBarNo{
+    background-color: rgba(164, 0, 0, 0);
+    height: 100%;
+
+}
+#timeFailPopup{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+#backToIndexButton{
+    width: 20%;
+    height: 20%;
+
+}
+.timeFailText{
+    font-size: 18px;
+    margin: 2%;
+}

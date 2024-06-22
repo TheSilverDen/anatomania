@@ -1,0 +1,82 @@
+@import java.util
+@(correctAnswerCount: util.HashMap[String, String], totalScore: Integer, timeBonus: Integer, organ: util.HashMap[String, String], tryCounter: util.ArrayList[String])
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/index.css")'>
+      <link rel="stylesheet" media="screen" href='@routes.Assets.versioned("stylesheets/drawer.css")'>
+      <link rel="stylesheet"  media="screen" href='@routes.Assets.versioned("stylesheets/basicComponents.css")'>
+      <link rel="stylesheet"  media="screen" href='@routes.Assets.versioned("stylesheets/complete.css")'>
+
+      <script src='@routes.Assets.versioned("javascripts/drawer.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/functions.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/main.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/gameStyle.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/complete.js")' type="text/javascript"></script>
+      <script src='@routes.Assets.versioned("javascripts/tags.js")' type="text/javascript"></script>
+      <script src="https://unpkg.com/feather-icons"></script>
+      <title>Main</title>
+    </head>
+    <body onload="isActive(); fillLevelBattery(4); addScoreToHighscore(@totalScore); getQuestionResults(); fillTagBar();">
+      <div class="drawerHelper">Main</div>
+        <!--Navigation bar-->
+      <aside id="nav-placeholder"> </aside>
+      <div class="pageContent">
+        <div class="whiteBox">
+          <h1 id="roundCompleteText">Runde beendet! Herzlichen Glückwunsch!</h1>
+            <div class="statistics">
+@*              <div class="outerBox" >*@
+@*                <div class="levelBox" id="level1"><p class="levelText" id="levelText1">1</p></div>*@
+@*                <div class="levelBox" id="level2"><p class="levelText" id="levelText2">2</p></div>*@
+@*                <div class="levelBox" id="level3"><p class="levelText" id="levelText3">3</p></div>*@
+@*              </div>*@
+              <div id="levelStatistics">
+                <div id="Level1" class="statisticsContent"><p style="font-size: large">Level 1: @organ.get("1") @correctAnswerCount.get("1") / 5 Fragen</p>&emsp; <div id="failsLevel1">@tryCounter.get(0)</div>&nbsp;Versuch/e</div>
+                  <hr>
+                <div id="Level2" class="statisticsContent"><p style="font-size: large">Level 2: @organ.get("2") @correctAnswerCount.get("2") / 5 Fragen</p>&emsp; <div id="failsLevel2">@tryCounter.get(1)</div>&nbsp;Versuch/e</div>
+                  <hr>
+                <div id="Level3" class="statisticsContent"><p style="font-size: large">Level 3: @organ.get("3") @correctAnswerCount.get("3") / 5 Fragen</p>&emsp; <div id="failsLevel3">@tryCounter.get(2)</div>&nbsp;Versuch/e</div>
+              </div>
+              <hr>
+              <div class="totalScore">
+                <i data-feather="dollar-sign" class="bi bi-play-fill"></i>
+                <p id="totalScore">@totalScore&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Zeitbonus: </p>
+                <i data-feather="dollar-sign" class="bi bi-play-fill"></i>
+                <p>@timeBonus</p>
+              </div>
+              <hr>
+            </div>
+          <div id="achievements"  style="display: none">
+            <p id="achievementsListHeader">Freigeschaltete Achievements</p>
+            <div id="achievementsListWrapper" class="achievementsListWrapper">
+              <ul id="achievementsList">
+              </ul>
+            </div>
+          </div>
+
+          <div class="barGroup">
+            <i data-feather="tag" class="barIcon"></i>
+            <div class="gameBar" id="progressTagBar" title="Bereits gesetzte Tags dieser Runde">
+              <div id="tagBarSmile"></div>
+              <div id="tagBarMeh"></div>
+              <div id="tagBarFrown"></div>
+              <div id="tagBarNo"></div>
+            </div>
+          </div>
+            <button type="submit" class="replayButton" onclick="window.location.href= 'http://localhost:9000/index';" ><i data-feather="repeat" class="bi bi-play-fill"></i></button>
+        </div>
+        </div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <aside>
+      @sideDrawer()
+      </aside>
+      <script>
+      feather.replace()
+    </script>
+    </body>
+  </html>

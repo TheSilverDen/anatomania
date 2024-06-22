@@ -1,0 +1,76 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.ViewController.index(request: Request)
+GET    	/login                      controllers.ViewController.login
+GET     /main                       controllers.ViewController.index(request: Request)
+GET 	/achievements               controllers.ViewController.achievements(request: Request)
+GET 	/index                      controllers.ViewController.index(request: Request)
+GET 	/friends					controllers.ViewController.friends(request: Request)
+GET 	/chat						controllers.ViewController.chat(request: Request)
+GET 	/highscores					controllers.ViewController.highscores(request: Request)
+GET 	/profileView				controllers.ViewController.profileView(request: Request)
+GET 	/profileEdit				controllers.ViewController.profileEdit(request: Request)
+GET     /profileFriend              controllers.ViewController.profileFriend(request: Request)
+GET 	/settings				    controllers.ViewController.settings(request: Request)
+GET     /logout                     controllers.ViewController.logout(request: Request)
+GET     /signup                     controllers.ViewController.signup
+GET     /failure                    controllers.ViewController.failure(request: Request)
+GET     /success                    controllers.ViewController.success(request: Request)
+GET     /game                       controllers.ViewController.game(request: Request)
+GET     /loadQuestion               controllers.ViewController.game(request: Request)
+GET     /complete                   controllers.ViewController.complete(request: Request)
+GET     /goToChat                   controllers.ViewController.chat(request: Request)
+
+#SessionController
+POST    /getSessionData              controllers.SessionController.getSessionData(request: Request)
+POST    /updateJokerCounter         controllers.SessionController.updateJokerCounter(request: Request)
+
+#QuestionController
+POST    /getInitialQuestion         controllers.QuestionsController.getInitialQuestion(request: Request)
+POST    /requestQuestions           controllers.QuestionsController.getQuestions(request: Request)
+POST    /getCorrectAnswerByQuestion controllers.QuestionsController.getCorrectAnswerByQuestion(request: Request)
+POST    /getCorrectlyAnsweredQuestions   controllers.QuestionsController.getCorrectlyAnsweredQuestions(request: Request)
+POST    /getQuestionResults         controllers.QuestionsController.getQuestionResults(request: Request)
+
+
+#UserController
+POST    /createUser                 controllers.UsersController.createUser(request: Request)
+POST	/validateLogin			    controllers.UsersController.validateLogin(request: Request)
+POST    /updateUserData             controllers.UsersController.updateUserData(request: Request)
+POST    /deleteAccount              controllers.UsersController.deleteAccount(request: Request)
+POST    /getAllUsers                controllers.UsersController.getAllUsers
+POST    /getHighscore               controllers.UsersController.getHighscore(request: Request)
+POST    /updateHighscore            controllers.UsersController.updateHighscore(request: Request)
+POST    /updateUserHasQuestion      controllers.UsersController.updateUserHasQuestion(request: Request)
+
+#FriendsController
+POST    /editFriendship         controllers.FriendsController.editFriendshipStatus(request: Request)
+POST    /checkFriendship        controllers.FriendsController.checkFriendship(request: Request)
+POST    /getAllFriends              controllers.FriendsController.getAllFriends(request: Request)
+POST    /getAllChats                controllers.FriendsController.getAllChats(request: Request)
+POST    /sendMessage                controllers.FriendsController.sendMessage(request: Request)
+POST    /getChatHistory             controllers.FriendsController.getChatHistory(request: Request)
+
+#AchievementsController
+POST    /unlockAchievement          controllers.AchievementsController.unlockAchievement(request: Request)
+POST    /checkAchievement           controllers.AchievementsController.checkAchievement(request: Request)
+POST    /getAllAchievementsPerUser  controllers.AchievementsController.getAllAchievementsPerUser(request: Request)
+POST    /getAllAchievements         controllers.AchievementsController.getAllAchievements(request: Request)
+POST    /getAchievementObject       controllers.AchievementsController.getAchievementObject(request: Request)
+
+#TagController
+POST    /getTotalQuestionCount      controllers.TagsController.getTotalQuestionCount(request: Request)
+POST    /getQuestionCountPerTag     controllers.TagsController.getQuestionCountPerTag(request: Request)
+POST    /setQuestionTag             controllers.TagsController.setQuestionTag(request: Request)
+POST    /getQuestionsByTag          controllers.TagsController.getQuestionsByTag(request: Request)
+
+#GameLogic
+POST    /checkDB                    controllers.GameLogicController.checkDB()
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+

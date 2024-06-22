@@ -1,0 +1,323 @@
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.topBarHead{
+    font-size: 18px;
+    padding: 30px;
+    margin-top: 12px;
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    border-right: #0f0f0f;
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(31,31,31,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.4);
+}
+
+h1 {
+    color: black;
+}
+/*{
+	text-align: center;
+}*/
+*{
+    /*list-style: none;
+    text-decoration: none;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #CCEEF9;
+
+}
+.fullWindow{
+    display: grid;
+
+    column-gap: 0;
+}
+
+.container{ /*ursprünglich bei Highscores statt "pageContent" */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0;
+}
+.whiteBox{
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s ease;
+    border-radius: 30px;
+    margin-top: 50px;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.pageContent{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    left: 25%;
+    right: 10%;
+    bottom: 10%;
+    min-width: 400px;
+    min-height: 300px;
+    z-index: 1;
+}
+.drawerHelper{
+    font-size: 0;
+}
+
+.searchBar{
+    border-radius: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/*--------------------------Login----------------------------------*/
+*{
+    text-align: center;
+
+}
+.loginContainer {
+    position: relative;
+    background-color: lightblue;
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    display: table;
+    top: 100px;
+    align-self: center;
+    border-radius: 30px;
+}
+.loginContent{
+    display: table-cell; vertical-align: middle;
+}
+/*--------------------------Main----------------------------------*/
+#mainImage{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    left: 100px;
+}
+
+.inputField{
+    width: 300px;
+}
+.pointsProfile{
+    width: 150px;
+    height: 150px;
+}
+.drawer{
+    height: 100%;
+}
+#nav-placeholder {
+    height: 100%
+}
+
+/*!*--------------------------Friends----------------------------------*!*/
+/*#friendListF{*/
+/*    padding: 40px;*/
+/*}*/
+
+/*.friendsListWrapperF{*/
+/*    width: 500px;*/
+/*    height: 490px;*/
+/*    overflow-y: scroll;*/
+/*    !*padding-top: 20px;*!*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    !*margin-top: 20px;*!*/
+/*    !*padding-bottom: 936px;*!*/
+/*}*/
+
+/*.friendsListItem{*/
+/*    display: flex;*/
+/*    padding-bottom: 30px;*/
+/*}*/
+/*.friendListText{*/
+/*    padding-left: 25px;*/
+/*    margin: auto;*/
+/*    margin-left: 15px;*/
+/*}*/
+
+/*.friendListPic{*/
+/*    padding-left: 20px;*/
+/*}*/
+
+
+/*.chatLinkButton{*/
+/*    background-color: white;*/
+/*    border-style: hidden;*/
+/*}*/
+
+/*.bi-messenger{*/
+/*    font-size: 23px;*/
+/*}*/
+/*!*#messagesButton{*!*/
+/*!*    background-color: white;*!*/
+/*!*    border-radius: 20px;*!*/
+/*!*    border-style: solid;*!*/
+/*!*    border-color: lightgray;*!*/
+/*!*    width: 80px;*!*/
+/*!*    height: 30px;*!*/
+/*!*    transition-duration: 0.2s;*!*/
+/*!*}*!*/
+
+/*#messagesButton:hover{*/
+/*    background-color: #a6a6a6;*/
+/*}*/
+/*--------------------------Chat----------------------------------*/
+
+
+
+/*--------------------------Achievements----------------------------------*/
+
+
+/*--------------------------Highscores----------------------------------*/
+
+/*h1{*/
+/*    text-align: center;*/
+/*}*/
+
+/*#topScores{*/
+/*    position: relative;*/
+/*    padding-bottom: 50px;*/
+/*    !*height: 150px;*/
+/*    padding-top: 100px;*/
+/*    !*display: flex;*/
+/*    flex-direction: row;*/
+/*    align-self: center;*!*/
+/*}*/
+
+/*#topScores {*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    height: 300px;*/
+/*}*/
+
+/*.podium-number {*/
+/*    !*font-family: DaggerSquare;*!*/
+/*    font-weight: bold;*/
+/*    font-size: 2em;*/
+/*    color: black;*/
+/*}*/
+
+/*.step-container {*/
+/*    flex: 1;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin: 15px 15px;*/
+/*}*/
+
+/*.step-container>div:first-child {*/
+/*    margin-top: auto;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.step {*/
+/*    text-align: center;*/
+/*    padding-right: 20px;*/
+/*    background: lightgray;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: black;*/
+/*}*/
+
+
+/*#first-step {*/
+/*    height: 50%;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+/*.scorePodium{*/
+/*    padding-left: 8px;*/
+/*    font-weight: lighter;*/
+/*    font-size: 0.75em;*/
+/*    color: black*/
+/*}*/
+
+/*#second-step {*/
+/*    height: 30%;*/
+/*}*/
+
+/*#third-step {*/
+/*    height: 25%;*/
+/*}*/
+
+/*.centerBoth {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+/*.profilePicScores{*/
+/*    width: 40%;*/
+/*}*/
+
+/*.restScores{*/
+/*    height: 300px;*/
+/*}*/
+
+/*table{*/
+/*    margin-left:auto;*/
+/*    margin-right:auto;*/
+/*    height: 330px;*/
+/*    width: 540px;*/
+/*}*/
+/*th{*/
+/*    background-color: lightgray;*/
+/*}*/
+/*#position{*/
+/*    width: 10px;*/
+/*}*/
+/*.tableColumn{*/
+/*    width: 35%;*/
+/*}*/
